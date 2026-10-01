@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Panel | RAMBHAU</title>
+
+  <meta
+    name="robots"
+    content="noindex,nofollow"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      RAM<span>BHAU</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      id="menuToggle"
+    >
+      ☰
+    </button>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="index.html">Website</a>
+      </li>
+
+      <li>
+        <a href="jobs.html">Jobs</a>
+      </li>
+
+      <li>
+        <a href="admin.html">Admin Panel</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+  <!-- LOGIN -->
+
+  <section id="loginSection">
+
+    <div class="admin-container">
+
+      <div
+        class="admin-box"
+        style="
+          max-width:500px;
+          margin:40px auto;
+        "
+      >
+
+        <h2>
+          RAMBHAU Admin Login
+        </h2>
+
+        <p style="color:#667085;margin-bottom:25px;">
+          Secure administrator access
+        </p>
+
+
+        <form id="loginForm">
+
+          <div class="form-group">
+
+            <label for="username">
+              Username
+            </label>
+
+            <input
+              type="text"
+              id="username"
+              autocomplete="username"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="password">
+              Password
+            </label>
+
+            <input
+              type="password"
+              id="password"
+              autocomplete="current-password"
+              required
+            >
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-blue"
+          >
+            Login
+          </button>
+
+        </form>
+
+
+        <div
+          id="loginMessage"
+          style="display:none;"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ADMIN DASHBOARD -->
+
+  <section
+    id="dashboardSection"
+    style="display:none;"
+  >
+
+    <div class="admin-container">
+
+
+      <div
+        style="
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          gap:15px;
+          margin-bottom:25px;
+          flex-wrap:wrap;
+        "
+      >
+
+        <div>
+
+          <h1 style="color:#102a56;">
+            RAMBHAU Admin Panel
+          </h1>
+
+          <p style="color:#667085;">
+            Manage jobs and candidate applications
+          </p>
+
+        </div>
+
+
+        <button
+          id="logoutButton"
+          class="btn btn-primary"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+
+      <!-- ADD JOB -->
+
+      <div class="admin-box">
+
+        <h2>
+          Add New Job
+        </h2>
+
+
+        <form id="jobForm">
+
+          <div class="detail-grid">
+
+
+            <div class="form-group">
+
+              <label>
+                Job Title *
+              </label>
+
+              <input
+                type="text"
+                id="jobTitle"
+                required
+                placeholder="Example: Picker / Packer"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Company *
+              </label>
+
+              <input
+                type="text"
+                id="jobCompany"
+                required
+                placeholder="Company name"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                District *
+              </label>
+
+              <input
+                type="text"
+                id="jobDistrict"
+                required
+                placeholder="Example: Thane"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                City *
+              </label>
+
+              <input
+                type="text"
+                id="jobCity"
+                required
+                placeholder="Example: Bhiwandi"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Category *
+              </label>
+
+              <select
+                id="jobCategory"
+                required
+              >
+
+                <option value="">
+                  Select Category
+                </option>
+
+                <option>Warehouse & Logistics</option>
+                <option>Delivery</option>
+                <option>Factory & Manufacturing</option>
+                <option>Hotel & Restaurant</option>
+                <option>Office Jobs</option>
+                <option>Sales & Marketing</option>
+                <option>Retail</option>
+                <option>Security</option>
+                <option>Driver Jobs</option>
+                <option>Construction & Skilled Work</option>
+                <option>Healthcare</option>
+                <option>IT & Digital</option>
+                <option>Work From Home</option>
+                <option>Part-Time Jobs</option>
+                <option>Internships / Freshers</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Job Type *
+              </label>
+
+              <select
+                id="jobType"
+                required
+              >
+
+                <option value="">
+                  Select Type
+                </option>
+
+                <option>Full Time</option>
+                <option>Part Time</option>
+                <option>Internship</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Salary *
+              </label>
+
+              <input
+                type="text"
+                id="jobSalary"
+                required
+                placeholder="Example: 15000 - 20000"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Experience
+              </label>
+
+              <input
+                type="text"
+                id="jobExperience"
+                placeholder="Example: 0-2 Years"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Shift
+              </label>
+
+              <input
+                type="text"
+                id="jobShift"
+                placeholder="Example: Day Shift"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Vacancies
+              </label>
+
+              <input
+                type="number"
+                id="jobVacancies"
+                min="1"
+                value="1"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Posting Date
+              </label>
+
+              <input
+                type="date"
+                id="postingDate"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label>
+                Expiry Date *
+              </label>
+
+              <input
+                type="date"
+                id="expiryDate"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Job Description *
+            </label>
+
+            <textarea
+              id="jobDescription"
+              required
+              placeholder="Enter complete job description"
+            ></textarea>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label>
+              Requirements
+            </label>
+
+            <textarea
+              id="jobRequirements"
+              placeholder="Enter candidate requirements"
+            ></textarea>
+
+          </div>
+
+
+          <div
+            style="
+              display:flex;
+              gap:20px;
+              flex-wrap:wrap;
+              margin-bottom:20px;
+            "
+          >
+
+            <label>
+
+              <input
+                type="checkbox"
+                id="jobFeatured"
+              >
+
+              Featured Job
+
+            </label>
+
+
+            <label>
+
+              <input
+                type="checkbox"
+                id="jobLatest"
+                checked
+              >
+
+              Latest Job
+
+            </label>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Publish Job
+          </button>
+
+
+          <div
+            id="jobMessage"
+            style="display:none;"
+          ></div>
+
+        </form>
+
+      </div>
+
+
+      <!-- JOB MANAGEMENT -->
+
+      <div class="admin-box">
+
+        <h2>
+          Manage Jobs
+        </h2>
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+
+              <tr>
+
+                <th>ID</th>
+                <th>Job</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Salary</th>
+                <th>Action</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody id="jobsTable">
+
+              <tr>
+
+                <td colspan="6">
+                  Loading jobs...
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      <!-- APPLICATIONS -->
+
+      <div class="admin-box">
+
+        <h2>
+          Candidate Applications
+        </h2>
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+
+              <tr>
+
+                <th>ID</th>
+                <th>Candidate</th>
+                <th>Mobile</th>
+                <th>Job</th>
+                <th>City</th>
+                <th>Status</th>
+                <th>Action</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody id="applicationsTable">
+
+              <tr>
+
+                <td colspan="7">
+                  Loading applications...
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-bottom">
+
+    © 2026 RAMBHAU. Admin Panel.
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const API = "/api";
+
+let token =
+  localStorage.getItem("rambhau_admin_token");
+
+
+const loginSection =
+  document.getElementById("loginSection");
+
+const dashboardSection =
+  document.getElementById("dashboardSection");
+
+
+function showDashboard() {
+
+  loginSection.style.display = "none";
+
+  dashboardSection.style.display = "block";
+
+  loadJobs();
+
+  loadApplications();
+
+}
+
+
+function showLogin() {
+
+  loginSection.style.display = "block";
+
+  dashboardSection.style.display = "none";
+
+}
+
+
+if (token) {
+
+  showDashboard();
+
+} else {
+
+  showLogin();
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+
+    const username =
+      document.getElementById("username").value.trim();
+
+    const password =
+      document.getElementById("password").value;
+
+
+    const message =
+      document.getElementById("loginMessage");
+
+
+    try {
+
+      const response =
+        await fetch(API + "/admin/login", {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+            username,
+            password
+          })
+
+        });
+
+
+      const data =
+        await response.json();
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          data.error || "Login failed"
+        );
+
+      }
+
+
+      token = data.token;
+
+      localStorage.setItem(
+        "rambhau_admin_token",
+        token
+      );
+
+
+      showDashboard();
+
+
+    } catch (error) {
+
+      message.style.display = "block";
+
+      message.className =
+        "error-message";
+
+      message.textContent =
+        error.message;
+
+    }
+
+  });
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+document
+  .getElementById("logoutButton")
+  .addEventListener("click", () => {
+
+    localStorage.removeItem(
+      "rambhau_admin_token"
+    );
+
+    token = null;
+
+    showLogin();
+
+  });
+
+
+/* =========================
+   ADD JOB
+========================= */
+
+document
+  .getElementById("jobForm")
+  .addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+
+    const message =
+      document.getElementById("jobMessage");
+
+
+    const job = {
+
+      title:
+        document.getElementById("jobTitle").value.trim(),
+
+      company:
+        document.getElementById("jobCompany").value.trim(),
+
+      district:
+        document.getElementById("jobDistrict").value.trim(),
+
+      city:
+        document.getElementById("jobCity").value.trim(),
+
+      category:
+        document.getElementById("jobCategory").value,
+
+      job_type:
+        document.getElementById("jobType").value,
+
+      salary:
+        document.getElementById("jobSalary").value.trim(),
+
+      experience:
+        document.getElementById("jobExperience").value.trim(),
+
+      shift:
+        document.getElementById("jobShift").value.trim(),
+
+      vacancies:
+        Number(
+          document.getElementById("jobVacancies").value
+        ) || 1,
+
+      posting_date:
+        document.getElementById("postingDate").value,
+
+      expiry_date:
+        document.getElementById("expiryDate").value,
+
+      description:
+        document.getElementById("jobDescription").value.trim(),
+
+      requirements:
+        document.getElementById("jobRequirements").value.trim(),
+
+      featured:
+        document.getElementById("jobFeatured").checked,
+
+      latest:
+        document.getElementById("jobLatest").checked
+
+    };
+
+
+    try {
+
+      const response =
+        await fetch(API + "/admin/jobs", {
+
+          method: "POST",
+
+          headers: {
+
+            "Content-Type":
+              "application/json",
+
+            "Authorization":
+              "Bearer " + token
+
+          },
+
+          body:
+            JSON.stringify(job)
+
+        });
+
+
+      const data =
+        await response.json();
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          data.error || "Unable to publish job"
+        );
+
+      }
+
+
+      message.style.display = "block";
+
+      message.className =
+        "success-message";
+
+      message.textContent =
+        "Job published successfully.";
+
+
+      document
+        .getElementById("jobForm")
+        .reset();
+
+
+      loadJobs();
+
+
+    } catch (error) {
+
+      message.style.display = "block";
+
+      message.className =
+        "error-message";
+
+      message.textContent =
+        error.message;
+
+    }
+
+  });
+
+
+/* =========================
+   LOAD JOBS
+========================= */
+
+async function loadJobs() {
+
+  const table =
+    document.getElementById("jobsTable");
+
+
+  try {
+
+    const response =
+      await fetch(API + "/admin/jobs", {
+
+        headers: {
+          "Authorization":
+            "Bearer " + token
+        }
+
+      });
+
+
+    if (response.status === 401) {
+
+      logout();
+
+      return;
+
+    }
+
+
+    const jobs =
+      await response.json();
+
+
+    if (!Array.isArray(jobs) ||
+        jobs.length === 0) {
+
+      table.innerHTML = `
+        <tr>
+          <td colspan="6">
+            No jobs found.
+          </td>
+        </tr>
+      `;
+
+      return;
+
+    }
+
+
+    table.innerHTML =
+      jobs.map((job) => `
+
+        <tr>
+
+          <td>
+            ${escapeHTML(job.id)}
+          </td>
+
+          <td>
+            ${escapeHTML(job.title)}
+          </td>
+
+          <td>
+            ${escapeHTML(job.company)}
+          </td>
+
+          <td>
+            ${escapeHTML(job.city || job.district || "")}
+          </td>
+
+          <td>
+            ₹ ${escapeHTML(job.salary || "")}
+          </td>
+
+          <td>
+
+            <button
+              class="btn btn-primary"
+              onclick="deleteJob(${Number(job.id)})"
+              type="button"
+            >
+              Delete
+            </button>
+
+          </td>
+
+        </tr>
+
+      `).join("");
+
+
+  } catch (error) {
+
+    table.innerHTML = `
+      <tr>
+        <td colspan="6">
+          Unable to load jobs.
+        </td>
+      </tr>
+    `;
+
+  }
+
+}
+
+
+/* =========================
+   DELETE JOB
+========================= */
+
+async function deleteJob(id) {
+
+  const confirmed =
+    confirm(
+      "Are you sure you want to delete this job?"
+    );
+
+
+  if (!confirmed) return;
+
+
+  try {
+
+    const response =
+      await fetch(
+        API + "/admin/jobs/" + id,
+        {
+
+          method: "DELETE",
+
+          headers: {
+            "Authorization":
+              "Bearer " + token
+          }
+
+        }
+      );
+
+
+    const data =
+      await response.json();
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        data.error || "Unable to delete job"
+      );
+
+    }
+
+
+    loadJobs();
+
+
+  } catch (error) {
+
+    alert(error.message);
+
+  }
+
+}
+
+
+/* =========================
+   LOAD APPLICATIONS
+========================= */
+
+async function loadApplications() {
+
+  const table =
+    document.getElementById("applicationsTable");
+
+
+  try {
+
+    const response =
+      await fetch(
+        API + "/admin/applications",
+        {
+
+          headers: {
+            "Authorization":
+              "Bearer " + token
+          }
+
+        }
+      );
+
+
+    if (response.status === 401) {
+
+      logout();
+
+      return;
+
+    }
+
+
+    const applications =
+      await response.json();
+
+
+    if (
+      !Array.isArray(applications) ||
+      applications.length === 0
+    ) {
+
+      table.innerHTML = `
+        <tr>
+          <td colspan="7">
+            No applications found.
+          </td>
+        </tr>
+      `;
+
+      return;
+
+    }
+
+
+    table.innerHTML =
+      applications.map((application) => `
+
+        <tr>
+
+          <td>
+            ${escapeHTML(application.id)}
+          </td>
+
+          <td>
+            ${escapeHTML(application.full_name)}
+          </td>
+
+          <td>
+            ${escapeHTML(application.mobile)}
+          </td>
+
+          <td>
+            ${escapeHTML(application.job_title || "")}
+          </td>
+
+          <td>
+            ${escapeHTML(application.current_city || "")}
+          </td>
+
+          <td>
+
+            <select
+              onchange="
+                updateApplicationStatus(
+                  ${Number(application.id)},
+                  this.value
+                )
+              "
+            >
+
+              ${createStatusOptions(
+                application.status
+              )}
+
+            </select>
+
+          </td>
+
+          <td>
+
+            ${
+              application.resume_url
+                ? `
+                  <a
+                    href="${escapeAttribute(
+                      application.resume_url
+                    )}"
+                    target="_blank"
+                    class="btn btn-blue"
+                  >
+                    Resume
+                  </a>
+                `
+                : "No Resume"
+            }
+
+          </td>
+
+        </tr>
+
+      `).join("");
+
+
+  } catch (error) {
+
+    table.innerHTML = `
+      <tr>
+        <td colspan="7">
+          Unable to load applications.
+        </td>
+      </tr>
+    `;
+
+  }
+
+}
+
+
+/* =========================
+   APPLICATION STATUS
+========================= */
+
+function createStatusOptions(current) {
+
+  const statuses = [
+    "new",
+    "contacted",
+    "shortlisted",
+    "selected",
+    "rejected",
+    "joined"
+  ];
+
+
+  return statuses.map((status) => {
+
+    const selected =
+      status === current
+        ? "selected"
+        : "";
+
+
+    return `
+      <option
+        value="${status}"
+        ${selected}
+      >
+        ${status}
+      </option>
+    `;
+
+  }).join("");
+
+}
+
+
+async function updateApplicationStatus(
+  id,
+  status
+) {
+
+  try {
+
+    const response =
+      await fetch(
+        API + "/admin/applications/" + id,
+        {
+
+          method: "PATCH",
+
+          headers: {
+
+            "Content-Type":
+              "application/json",
+
+            "Authorization":
+              "Bearer " + token
+
+          },
+
+          body:
+            JSON.stringify({
+              status
+            })
+
+        }
+      );
+
+
+    const data =
+      await response.json();
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        data.error ||
+        "Unable to update status"
+      );
+
+    }
+
+
+  } catch (error) {
+
+    alert(error.message);
+
+    loadApplications();
+
+  }
+
+}
+
+
+/* =========================
+   LOGOUT HELPER
+========================= */
+
+function logout() {
+
+  localStorage.removeItem(
+    "rambhau_admin_token"
+  );
+
+  token = null;
+
+  showLogin();
+
+}
+
+
+/* =========================
+   SECURITY HELPERS
+========================= */
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs | RAMBHAU</title>
+  <meta name="description" content="Find verified jobs across Maharashtra with RAMBHAU.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <a href="index.html" class="logo">
+      RAM<span>BHAU</span>
+    </a>
+
+    <button class="menu-toggle" type="button">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="index.html#categories">Categories</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <select class="language-select">
+      <option value="en">English</option>
+      <option value="mr">मराठी</option>
+      <option value="hi">हिंदी</option>
+    </select>
+
+  </nav>
+</header>
+
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <h1>Find Jobs Across <span>Maharashtra</span></h1>
+
+    <p>
+      Search verified job opportunities by job title, district,
+      category and employment type.
+    </p>
+
+  </div>
+</section>
+
+
+<section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Search Jobs</h2>
+    <p>Find the right opportunity for you.</p>
+  </div>
+
+
+  <div class="hero-card">
+
+    <form id="jobsFilterForm">
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchKeyword"
+          placeholder="Job title, company or keyword"
+        >
+
+        <select id="searchDistrict">
+          <option value="">All Districts</option>
+          <option>Mumbai City</option>
+          <option>Mumbai Suburban</option>
+          <option>Thane</option>
+          <option>Palghar</option>
+          <option>Raigad</option>
+          <option>Pune</option>
+          <option>Satara</option>
+          <option>Sangli</option>
+          <option>Kolhapur</option>
+          <option>Nashik</option>
+          <option>Ahilyanagar</option>
+          <option>Solapur</option>
+          <option>Nagpur</option>
+          <option>Chhatrapati Sambhajinagar</option>
+          <option>Jalgaon</option>
+          <option>Dhule</option>
+          <option>Nandurbar</option>
+          <option>Nanded</option>
+          <option>Latur</option>
+          <option>Beed</option>
+          <option>Parbhani</option>
+          <option>Hingoli</option>
+          <option>Dharashiv</option>
+          <option>Amravati</option>
+          <option>Akola</option>
+          <option>Buldhana</option>
+          <option>Washim</option>
+          <option>Yavatmal</option>
+          <option>Wardha</option>
+          <option>Bhandara</option>
+          <option>Gondia</option>
+          <option>Chandrapur</option>
+          <option>Gadchiroli</option>
+          <option>Ratnagiri</option>
+          <option>Sindhudurg</option>
+        </select>
+
+
+        <select id="searchCategory">
+          <option value="">All Categories</option>
+          <option>Warehouse & Logistics</option>
+          <option>Delivery</option>
+          <option>Factory & Manufacturing</option>
+          <option>Hotel & Restaurant</option>
+          <option>Office Jobs</option>
+          <option>Sales & Marketing</option>
+          <option>Retail</option>
+          <option>Security</option>
+          <option>Driver Jobs</option>
+          <option>Construction & Skilled Work</option>
+          <option>Healthcare</option>
+          <option>IT & Digital</option>
+          <option>Work From Home</option>
+          <option>Part-Time Jobs</option>
+          <option>Internships / Freshers</option>
+        </select>
+
+
+        <button type="submit" class="btn btn-primary">
+          Search
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Available Jobs</h2>
+    <p id="jobCount">Loading jobs...</p>
+  </div>
+
+
+  <div id="jobsContainer" class="jobs-grid">
+
+    <div class="empty-message">
+      <h3>Loading Jobs...</h3>
+      <p>Please wait.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+      <div class="footer-logo">
+        RAM<span>BHAU</span>
+      </div>
+
+      <p>
+        Jobs • Careers • Recruitment
+      </p>
+
+      <p style="margin-top:10px;">
+        Maharashtra's recruitment platform connecting
+        candidates with verified job opportunities.
+      </p>
+    </div>
+
+
+    <div>
+
+      <div class="footer-title">
+        Quick Links
+      </div>
+
+      <ul class="footer-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="jobs.html">Jobs</a>
+        </li>
+
+        <li>
+          <a href="index.html#categories">Categories</a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+
+
+    <div>
+
+      <div class="footer-title">
+        RAMBHAU
+      </div>
+
+      <ul class="footer-links">
+        <li>
+          Jobs
+        </li>
+
+        <li>
+          Careers
+        </li>
+
+        <li>
+          Recruitment
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    © 2026 RAMBHAU. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("jobsFilterForm");
+  const container = document.getElementById("jobsContainer");
+  const count = document.getElementById("jobCount");
+
+  const params = new URLSearchParams(window.location.search);
+
+  const keywordInput = document.getElementById("searchKeyword");
+  const districtInput = document.getElementById("searchDistrict");
+  const categoryInput = document.getElementById("searchCategory");
+
+  keywordInput.value = params.get("keyword") || "";
+  districtInput.value = params.get("district") || "";
+  categoryInput.value = params.get("category") || "";
+
+
+  async function loadJobs() {
+
+    container.innerHTML = `
+      <div class="empty-message">
+        <h3>Loading Jobs...</h3>
+        <p>Please wait.</p>
+      </div>
+    `;
+
+    try {
+
+      const keyword = keywordInput.value.trim();
+      const district = districtInput.value;
+      const category = categoryInput.value;
+
+      const query = new URLSearchParams();
+
+      if (keyword) {
+        query.set("keyword", keyword);
+      }
+
+      if (district) {
+        query.set("district", district);
+      }
+
+      if (category) {
+        query.set("category", category);
+      }
+
+
+      const response = await fetch(
+        "/api/jobs?" + query.toString()
+      );
+
+
+      if (!response.ok) {
+        throw new Error("Failed to load jobs");
+      }
+
+
+      const jobs = await response.json();
+
+
+      if (!Array.isArray(jobs) || jobs.length === 0) {
+
+        count.textContent = "0 jobs found";
+
+        container.innerHTML = `
+          <div class="empty-message">
+            <h3>No Jobs Found</h3>
+            <p>
+              No matching jobs are available right now.
+              Please try another search.
+            </p>
+          </div>
+        `;
+
+        return;
+      }
+
+
+      count.textContent =
+        jobs.length + (jobs.length === 1 ? " job found" : " jobs found");
+
+
+      container.innerHTML = jobs
+        .map(createJobCard)
+        .join("");
+
+    } catch (error) {
+
+      console.log(error);
+
+      count.textContent = "";
+
+      container.innerHTML = `
+        <div class="empty-message">
+          <h3>Jobs Are Coming Soon</h3>
+          <p>
+            The RAMBHAU job database will appear here
+            after the backend is connected.
+          </p>
+        </div>
+      `;
+
+    }
+
+  }
+
+
+  function createJobCard(job) {
+
+    const title = escapeHTML(job.title || "Job Opportunity");
+    const company = escapeHTML(job.company || "Company");
+    const district = escapeHTML(job.district || "");
+    const city = escapeHTML(job.city || "");
+    const salary = escapeHTML(job.salary || "Not disclosed");
+    const type = escapeHTML(job.job_type || "Full Time");
+    const experience = escapeHTML(job.experience || "Any experience");
+
+    const slug = encodeURIComponent(
+      job.slug || job.id || ""
+    );
+
+
+    return `
+      <article class="job-card">
+
+        <h3>${title}</h3>
+
+        <div class="job-company">
+          ${company}
+        </div>
+
+        <div class="job-info">
+
+          ${
+            district
+              ? `<span class="job-tag">${district}</span>`
+              : ""
+          }
+
+          ${
+            city
+              ? `<span class="job-tag">${city}</span>`
+              : ""
+          }
+
+          <span class="job-tag">
+            ${type}
+          </span>
+
+          <span class="job-tag">
+            ${experience}
+          </span>
+
+        </div>
+
+
+        <div class="salary">
+          ₹ ${salary}
+        </div>
+
+
+        <a
+          href="job.html?slug=${slug}"
+          class="btn btn-blue"
+        >
+          View Job
+        </a>
+
+      </article>
+    `;
+  }
+
+
+  function escapeHTML(value) {
+
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+
+  }
+
+
+  form.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    const query = new URLSearchParams();
+
+    if (keywordInput.value.trim()) {
+      query.set(
+        "keyword",
+        keywordInput.value.trim()
+      );
+    }
+
+    if (districtInput.value) {
+      query.set(
+        "district",
+        districtInput.value
+      );
+    }
+
+    if (categoryInput.value) {
+      query.set(
+        "category",
+        categoryInput.value
+      );
+    }
+
+    window.history.replaceState(
+      {},
+      "",
+      "jobs.html?" + query.toString()
+    );
+
+    loadJobs();
+
+  });
+
+
+  loadJobs();
+
+});
+
+</script>
+
+</body>
+</html>
